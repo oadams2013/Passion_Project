@@ -1,0 +1,114 @@
+application {
+  config {
+    baseName FinaLit,
+    packageName finalit.olamide,
+    applicationType monolith,
+    prodDatabaseType mysql,
+  }
+  entities *
+}
+
+
+//entity Student {
+	//studentName String,
+ //   studentEmail String, 
+    
+//}
+
+entity Course {
+	courseName String
+}
+
+//entity CourseBodyOutline {
+	
+//}
+
+
+
+// an ignored comment
+/** not an ignored comment */
+entity CourseUnit {
+	unitName String,
+	unitNumber Integer
+	
+}
+
+entity Lesson {
+	lessonName String,
+    lessonNumber Integer
+}
+
+/**
+ * Task entity.
+ * @author The JHipster team.
+ */
+entity Video {
+	title String,
+	description String
+}
+
+/**
+ * The Employee entity.
+ */
+entity Article {
+	/**
+	* The firstname attribute.
+	*/
+    articleDescription String, 
+    articleTitle String
+    
+	
+}
+
+entity PracticeProblemSet {
+	practiceProblemName String,
+    practiceProblemQuestion String,
+    practiceProblemAnswer String
+}
+
+entity UnitQuiz {
+	unitQuizDescription String
+   
+}
+entity CourseUnitTest{
+	testName String, 
+    unitTestNumber Integer
+}
+
+
+//relationship OneToMany {
+//	Course{units} to CourseUnit
+//}
+
+//relationship OneToMany {
+//	CourseUnit{lessons} to Lesson
+//} //lessons= object
+
+//relationship OneToOne {
+//    CourseUnit{quiz} to UnitQuiz
+//}
+
+//relationship OneToMany {
+//	Lesson{problemset} to PracticeProblemSet
+//}
+
+// defining multiple OneToMany relationships with comments
+//relationship OneToMany {
+//	CourseUnit to CourseUnitTest{courseunittest}
+//	
+//}
+
+//relationship OneToOne {
+//	Student to UserId
+//}
+
+// defining multiple oneToOne relationships
+//relationship OneToMany{
+//	Lesson{articles} to Article
+//}
+//relationship OneToMany{
+//	Lesson{videos} to Video
+//}
+//relationship OneToMany{
+//	Lesson{practiceProblemSet} to PracticeProblemSet
+//}
